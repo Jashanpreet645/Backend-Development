@@ -1,0 +1,105 @@
+/* General body styling */
+body {
+    background-color: #e6ecf0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Main heading */
+h1 {
+    color: #1DA1F2;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+/* Each post card */
+.post {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect on posts */
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Username (@user) */
+.user {
+    color: #1DA1F2;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+/* Post content */
+.content {
+    color: #14171A;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Likes and comments buttons */
+.likes, .comments {
+    background-color: #1DA1F2;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    margin: 5px 5px 0 0;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for buttons */
+.likes:hover, .comments:hover {
+    background-color: #0d8ddb;
+}
+
+/* Create new post link */
+a {
+    display: inline-block;
+    margin-top: 30px;
+    background-color: #1DA1F2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for link */
+a:hover {
+    background-color: #0d8ddb;
+}
+
+a.about {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #8460f0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 260px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+a:hover {
+    background-color: #c32bff;
+    /* transform: translateY(-5px); */
+    /* box-shadow: 0 10px 20px rgba(0,0,0,0.2); */
+}

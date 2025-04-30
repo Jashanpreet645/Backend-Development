@@ -1,0 +1,16 @@
+{
+  "name": "node_ejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jashanpreet singh",
+  "license": "ISC",
+  "description": "this is a simple nodejs app using ejs",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}
