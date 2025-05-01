@@ -3,22 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twitter</title>
+    <title>Twitter Posts</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <h1>TWITTER POSTS</h1>
-    <% for (post of posts) {%>
-        <div class="post">
-            <h3 class="user">@<%= post.username%></h3>
-            <h4 class="content"><%= post.content%></h4>
-            <button class="likes"><%= post.likes%></button>
-            <button class="comments"><%= post.comments%></button>
-            <a class="about" href ="http://localhost:3000/posts/<%= post.id %>">detailed info</a>
-        </div>
-    <%}%>
-    <br>
-    <br>
-    <a href="http://localhost:3000/posts/new">Create new Post</a>
+    <header>
+        <h1>TWITTER POSTS</h1>
+    </header>
+    <main>
+        <% for (post of posts) {%>
+            <article class="post">
+                <h3 class="user">@<%= post.username%></h3>
+                <p class="content"><%= post.content%></p>
+                <div class="interactions">
+                    <button class="likes"><i class="far fa-heart"></i> <%= post.likes%></button>
+                    <button class="comments"><i class="far fa-comment"></i> <%= post.comments%></button>
+                </div>
+                <div class="buttons">
+                    <a class="about" href="/posts/<%= post.id %>"><i class="fas fa-info-circle"></i> Details</a>
+                    <a class="edit" href="/posts/<%= post.id %>/edit"><i class="fas fa-edit"></i> Edit</a>
+                    <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+                        <button class="delete" type="submit"><i class="fas fa-trash-alt"></i> Delete</button>
+                    </form>
+                </div>
+            </article>
+        <%}%>
+    </main>
+    <footer>
+        <a href="/posts/new" class="create-new-post"><i class="fas fa-plus"></i> Create New Post</a>
+    </footer>
 </body>
 </html>

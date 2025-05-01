@@ -1,105 +1,200 @@
-/* General body styling */
-body {
-    background-color: #e6ecf0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Reset and base styles */
+* {
     margin: 0;
-    padding: 20px;
-    text-align: center;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Main heading */
+body {
+    background-color: #f5f8fa;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 h1 {
-    color: #1DA1F2;
-    font-size: 36px;
-    margin-bottom: 30px;
+    text-align: center;
+    color: #1da1f2;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
 }
 
-/* Each post card */
+/* Post container styles */
 .post {
-    background-color: #ffffff;
+    background-color: white;
     border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-    width: 90%;
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 20px;
-    text-align: left;
-    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
 }
 
-/* Hover effect on posts */
 .post:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Username (@user) */
 .user {
-    color: #1DA1F2;
-    font-size: 20px;
-    font-weight: bold;
-    margin: 0 0 10px 0;
+    color: #1da1f2;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
 }
 
-/* Post content */
 .content {
-    color: #14171A;
-    font-size: 18px;
-    margin-bottom: 15px;
+    color: #14171a;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
 }
 
-/* Likes and comments buttons */
-.likes, .comments {
-    background-color: #1DA1F2;
+/* Button styles */
+button {
+    background: none;
     border: none;
-    color: white;
-    padding: 8px 15px;
-    margin: 5px 5px 0 0;
-    border-radius: 20px;
-    font-size: 14px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    color: #657786;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
-/* Hover effect for buttons */
-.likes:hover, .comments:hover {
-    background-color: #0d8ddb;
+button:hover {
+    color: black;
+}
+
+/* Action buttons container */
+.buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e1e8ed;
+}
+
+/* Link styles */
+a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.about {
+    background-color: #1da1f2;
+    color: white;
+}
+
+.edit {
+    background-color: #17bf63;
+    color: white;
+}
+
+.delete {
+    background-color: #e0245e;
+    color: white;
+}
+
+a:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
 }
 
 /* Create new post link */
-a {
-    display: inline-block;
-    margin-top: 30px;
-    background-color: #1DA1F2;
+body > a {
+    display: block;
+    text-align: center;
+    background-color: #1da1f2;
     color: white;
-    padding: 10px 20px;
+    padding: 1rem;
     border-radius: 25px;
-    text-decoration: none;
+    margin-top: 2rem;
     font-weight: bold;
-    transition: background-color 0.3s;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Hover effect for link */
-a:hover {
-    background-color: #0d8ddb;
-}
-
-a.about {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #8460f0;
+/* Create New Post Button Styles */
+.create-new-post {
+    display:inline;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #1d9bf0;
     color: white;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    font-size: 15px;
+    font-weight: 600;
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 5px;
-    font-size: 14px;
-    font-weight: bold;
-    margin-left: 260px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(29, 155, 240, 0.2);
 }
 
-a:hover {
-    background-color: #c32bff;
-    /* transform: translateY(-5px); */
-    /* box-shadow: 0 10px 20px rgba(0,0,0,0.2); */
+.create-new-post:hover {
+    background-color: #1a8cd8;
+    box-shadow: 0 4px 12px rgba(29, 155, 240, 0.3);
+    transform: translateY(-1px);
+}
+
+.create-new-post:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(29, 155, 240, 0.2);
+}
+
+/* Plus icon styles */
+.create-new-post i {
+    font-size: 18px;
+}
+
+/* Form styles */
+form {
+    display: inline;
+}
+
+.button-container {
+    padding: 16px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    display: inline-block;
+}
+
+/* Hover effect for container */
+.button-container:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    a {
+        text-align: center;
+    }
+
+    .create-new-post {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .button-container {
+        width: 100%;
+        text-align: center;
+    }
 }
